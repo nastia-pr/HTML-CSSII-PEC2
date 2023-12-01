@@ -1,0 +1,137 @@
+.header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: $header-background-color;
+  box-shadow: $header-box-shadow;
+  border-bottom-left-radius: $header-border-radius;
+  border-bottom-right-radius: $header-border-radius;
+  margin-bottom: 60px;
+
+  .logo {
+    padding: 10px;
+    font-size: 1.8rem;
+    font-weight: 300;
+
+    a {
+      padding: 10px 15px;
+      text-align: center;
+      display: block;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  .main-nav {
+    margin: 0;
+    padding: 15px;
+    list-style: none;
+
+    a {
+      padding: 10px 15px;
+      text-align: center;
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      transition: color $header-transition-duration;
+
+      &:hover {
+        color: #718daa;
+      }
+    }
+  }
+}
+  
+  
+  @media (min-width: 769px) {
+      .header,
+      .main-nav {
+          display: flex;
+      }
+      .header {
+          flex-direction: column;
+          align-items: center;
+          .header{
+          width: 80%;
+          margin: 0 auto;
+          max-width: 1150px;
+      }
+      }
+  
+  }
+  
+  @media (min-width: 1025px) {
+      .header {
+          flex-direction: row;
+          justify-content: space-between;
+      }
+  
+  }
+  
+
+  /* Main Content */
+
+.title_page2 {
+    text-align: center;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .cards {
+    max-width: 300px;
+    min-height: 250px;
+    overflow: hidden;
+    background: #91d3f0;
+    padding: 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #000;
+    margin: 20px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+  
+    &-img {
+   margin-bottom: 20px;
+    }
+  
+    &-title {
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+    }
+  
+    &-content {
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      line-height: 1.5;
+      overflow: hidden;
+      display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    }
+  
+    &-btn {
+      all: unset;
+      display: block;
+      margin-left: auto;
+      border: 2px solid #FFF;
+      padding: 10px 15px;
+      border-radius: 25px;
+      font-size: 10px;
+      font-weight: 600;
+      transition: all 0.5s;
+      cursor: pointer;
+      letter-spacing: 1.2px;
+  
+      &:hover {
+        color: #0e02b8;
+        background: #FFF;
+      }
+    }
+  }
+  
+  
+  

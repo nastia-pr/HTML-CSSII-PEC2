@@ -1,27 +1,64 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/main.scss"
+        />
+        <!-- do not remove this line! -->
+        <title>Tennis Club Pelota Virtuosa</title>
+    </head>
+    <body>
+        <header class="hero">
+            <nav class="nav container">
+                <h2 class="nav_logo">PelotaVirtuosa</h2>
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="members.html" class="nav_link">Miembros</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="article.html" class="nav_link">Nuestro Blog</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#" class="nav_link">Contacto</a>
+                    </li>
+                </ul>
+
+                <div class="nav_menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+
+            <section class="hero_main container">
+                <div class="hero_text">
+                    <h1 class="hero_title">Pelota Virtuosa</h1>
+                    <p class="hero_subtitle">Tu Club de Tenis</p>
+                    <a href="#" class="hero_cta">Join us</a>
+                </div>
+
+                <figure class="hero_picture">
+                    <img
+                        class="hero_img"
+                        src="../src/assets/images/raqueta.png"
+                        alt=""
+                    />
+                </figure>
+            </section>
+
+            <div class="hero_waves">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path
+                        fill="#fff"
+                        d="M0,160L26.7,154.7C53.3,149,107,139,160,149.3C213.3,160,267,192,320,218.7C373.3,245,427,267,480,250.7C533.3,235,587,181,640,160C693.3,139,747,149,800,181.3C853.3,213,907,267,960,293.3C1013.3,320,1067,320,1120,288C1173.3,256,1227,192,1280,149.3C1333.3,107,1387,85,1413,74.7L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+                    ></path>
+                </svg>
+            </div>
+        </header>
+
+        <script type="module" src="./assets/scripts/main.js"></script>
+        <include src="./views/footer.html"></include>
+    </body>
 </html>
