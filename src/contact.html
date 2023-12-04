@@ -8,19 +8,25 @@
             type="text/css"
             href="./assets/styles/main.scss"
         />
-        <title>Page two</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="../src/assets/images/favicon.png"
+        />
+
+        <title>Página de contacto</title>
     </head>
-    <body class="article-background">
+    <body class="color-bg">
         <include src="./views/header.html"></include>
-        <div class="container my-5">
+        <div class="container my-5 contact-form">
             <div class="row justify-content-center">
                 <div class="col-lg-9">
-                    <h1 class="mb-3">Contact Us</h1>
+                    <h1 class="mb-3">Contáctanos</h1>
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="your-name" class="form-label"
-                                    >Your Name</label
+                                    >Nombre</label
                                 >
                                 <input
                                     type="text"
@@ -32,7 +38,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="your-surname" class="form-label"
-                                    >Your Surname</label
+                                    >Apellidos</label
                                 >
                                 <input
                                     type="text"
@@ -44,7 +50,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="your-email" class="form-label"
-                                    >Your Email</label
+                                    >Correo Electrónico</label
                                 >
                                 <input
                                     type="email"
@@ -56,7 +62,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="your-subject" class="form-label"
-                                    >Your Subject</label
+                                    >Asunto</label
                                 >
                                 <input
                                     type="text"
@@ -67,7 +73,7 @@
                             </div>
                             <div class="col-12">
                                 <label for="your-message" class="form-label"
-                                    >Your Message</label
+                                    >Mensaje</label
                                 >
                                 <textarea
                                     class="form-control"
@@ -84,8 +90,11 @@
                                             data-res="<?php echo $sum; ?>"
                                             type="submit"
                                             class="btn btn-dark w-100 fw-bold"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom"
+                                            title="Enviar Mensaje"
                                         >
-                                            Send
+                                            Enviar
                                         </button>
                                     </div>
                                 </div>
@@ -96,7 +105,6 @@
             </div>
         </div>
 
-        <script type="module" src="./assets/scripts/main.js"></script>
         <include src="./views/footer.html"></include>
     </body>
 </html>

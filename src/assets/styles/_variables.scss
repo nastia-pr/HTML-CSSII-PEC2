@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;700&display=swap');
 
+
 $font-family-sans-serif: "Urbanist", sans serif;
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
@@ -9,6 +10,31 @@ $font-family-serif: "Georgia", "Times New Roman", serif;
 $header-background-color: #0067aa;
 $header-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
 $header-border-radius: 10px;
-$header-transition-duration: 0.3s;
+$header-transition-duration: 0.7s;
+
+$white-color:#fff;
+$black-color: #000;
+$hover-cta:  #4fb576;
+$hover-link:  #9aff5c;
+$hover-read-more: #0e02b8;
+
+$footer-background-color: #05498e;
+$social-icons-hover: linear-gradient(45deg, #9aff5c, rgb(219, 152, 63));
+
+$cards-background: #91d3f0;
+$tip-background:  #bada55;
+$tip-yellow: #ffc600;
+
+$myColor-contactInput: rgb(140, 208, 250);
+
+
+// Custom bootstrap variables
+$custom-carousel-width: 60%;
+$custom-carousel-width-mobile: 90%;
+$texto-carousel-background: rgba(0, 0, 0, 0.5);
+$texto-carousel-font-size: 14px;
+$texto-carousel-padding: 5px;
+$contact-link-color: #007bff;
+$contact-link-hover-color: #0056b3;
 
 $mqMinWidth: 420px;

@@ -4,10 +4,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: $font-family-sans-serif;
 }
 
-body {
-  font-family: $font-family-sans-serif;
+.color-bg {
+  background: hsl(from #edfffa h calc(s + 20%) l / 0.5);
 }
 
 /* LANDING PAGE */
@@ -22,7 +23,7 @@ body {
 .hero {
   background-image: url(../images/pista.jpg);
   background-size: cover;
-  color: #fff;
+  color: $white-color;
   display: grid;
   grid-template-rows: max-content 1fr;
   grid-template-areas: 
@@ -39,26 +40,44 @@ body {
     align-items: center;
     height: 90px;
 
-    .nav_menu {
-      display: none;
-    }
-
     .nav_list {
       list-style: none;
       display: grid;
       grid-auto-flow: column;
       gap: 2em;
+      padding: 0;
 
       .nav_link {
-        color: #fff;
+        color: $white-color;
         text-decoration: none;
+      }
+
+      .nav_item a {
+        transition: color $header-transition-duration;
+        
+        &:hover {
+          color:$hover-link;
+        }
       }
     }
 
     .nav_logo {
-      font-size: 1.8rem;
-      font-weight: 300;
-      padding: 10px;
+      font-size: 1rem;
+      padding: 25px;
+      margin-top: 10px;
+      background: radial-gradient(
+        ellipse at center,
+        #ffeb3b 0%,
+        #ffeb3b 25%,
+        #f2d489 26%,
+        #fbc02d 50%,
+        #21f359 51%,
+        #2196f3 75%,
+        #5298dd 76%,
+        #1e80e9 100%
+      );
+      border-radius: 15px;
+      color: black;
     }
   }
 
@@ -78,7 +97,7 @@ body {
   }
 
   .hero_text {
-    color: black;
+    color: $black-color;
 
     .hero_title {
       font-size: 2.6rem;
@@ -94,7 +113,7 @@ body {
 
     .hero_cta {
       text-decoration: none;
-      color: #fff;
+      color: $white-color;
       padding: 15px 60px;
       border: 1px solid;
       border-radius: 6px;
@@ -103,8 +122,9 @@ body {
       transition: background-color .3s;
 
       &:hover {
-        background-color: #fff;
-        color: #4fb576;
+        background-color: $white-color;
+        color: $hover-cta;
+        font-weight: 600;
       }
     }
   }
@@ -114,12 +134,21 @@ body {
   }
 
   @media (max-width:800px) {
-    nav.container .nav_list {
-      display: none;
-    }
 
-    nav.container .nav_menu {
-      display: block;
+    .nav {
+      grid-template-rows: auto;
+      grid-auto-flow: row;
+      text-align: center;
+      height: auto;
+      justify-content: center; 
+
+      .nav_list {
+        grid-auto-flow: row;
+      }
+
+      .nav_logo {
+        margin-top: 10px;
+      }
     }
 
     .hero_main {
@@ -140,11 +169,57 @@ body {
   }
 }
 
+
+/* Otras actividades bootstrap carousel */
+
+.title {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 3em;
+}
+
+.custom-carousel {
+  width: $custom-carousel-width;
+  margin: 50px auto;
+
+  @media (max-width: 800px) {
+    width: $custom-carousel-width-mobile;
+  }
+
+  .carousel-inner {
+    border-radius: 10px;
+  }
+
+  .texto-carousel {
+    color: $white-color;
+    background-color: $texto-carousel-background;
+    padding: 10px;
+    border-radius: 10px;
+
+    @media (max-width: 800px) {
+      font-size: $texto-carousel-font-size;
+      padding: $texto-carousel-padding;
+    }
+  }
+
+  .contact-link {
+    color: $contact-link-color;
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $contact-link-hover-color;
+    }
+  }
+}
+
+
 /* FOOTER */
 .site_footer {
   margin-top: 150px;
   position: relative;
-  background-color: #05498e;
+  background-color: $footer-background-color;
   width: 100%;
   bottom: 0;
 
@@ -164,7 +239,7 @@ body {
       margin-bottom: 20px;
   
       p {
-          color: #ffffff;
+          color: $white-color;
           margin: 5px 0;
           font-size: 14px;
 
@@ -185,13 +260,14 @@ body {
       }
 
       a {
-        color: #ffffff;
+        color: $white-color;
         text-decoration: none;
         font-size: 15px;
         line-height: 16.25px;
+        transition: color $header-transition-duration;
 
         &:hover {
-          color: #9aff5c;
+          color: $hover-link;
         }
       }
 
@@ -218,15 +294,15 @@ body {
       display: block;
       height: 2px;
       border: 0;
-      border-top: 1px solid #000000;
-      margin: 1px;
+      border-top: 1px solid $black-color;
+      margin: 2px;
       padding: 0;
     }
 
     .texto-copyright {
       font-size: 12px;
       text-align: right;
-      color: #ffffff;
+      color: $white-color;
       font-weight: 500;
 
       @media (max-width: 800px) {
@@ -236,7 +312,7 @@ body {
 
     .logo {
       cursor: pointer;
-      color: #fff;
+      color: $white-color;
       font-size: 18px;
 
       @media (max-width: 800px) {
@@ -257,7 +333,7 @@ body {
         font-size: 20px;
         width: 40px;
         height: 40px;
-        color: #1A1F24;
+        color: $white-color;
         justify-content: center;
         align-items: center;
         position: relative;
@@ -268,7 +344,7 @@ body {
         }
 
         &:hover i {
-          background: linear-gradient(45deg, #9aff5c, rgb(219, 152, 63));
+          background: $social-icons-hover;
           background-clip: text;
           -webkit-text-fill-color: transparent;
           transform: scale(1.5);
