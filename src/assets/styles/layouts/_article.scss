@@ -27,18 +27,17 @@
     text-align: center;
     padding: 1em;
 
-    h2 {
-      font-size: 3em;
+    :where(h2, h4) {
       font-weight: 400;
-      line-height: 1em;
-      margin-bottom: 30px;
       color: $black-color;
     }
 
-    h4 {
-      font-weight: 400;
-      color: $black-color;
+    h2 {
+      font-size: 3em;
+      line-height: 1em;
+      margin-bottom: 30px;
     }
+    
   }
 
   @media (max-width: 800px) {
@@ -58,6 +57,133 @@
 
 /* Blog Post */
 
+/* Fallback for browsers that do not support Grid */
+.post {
+  color: #444;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 100px auto;
+  gap: 10px 50px;
+  justify-content: space-between;
+
+  @container (min-width: 650px) {
+    .post {
+      font-size: 18px;
+    }
+  }
+
+  :where(p) {
+    line-height: 1.8;
+  }
+
+  :is(p.special-paragraph) {
+    font-style: italic;
+    text-align: right;
+  }
+
+  :where(img) {
+    max-width: 100%;
+  }
+
+  :where(h1, h2) {
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  > * {
+    flex: 0 1 calc(25% - 10px);
+  }
+
+  > figure {
+    margin: 0;
+    width: 100%;
+  }
+
+  :has(figcaption) {
+    font-size: 10px;
+  }
+
+  :is(blockquote) {
+    flex: 0 1 100%;
+    font-size: 50px;
+    text-align: center;
+    margin: 0px;
+  }
+
+  .tip {
+    background: $tip-background;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .tip-left {
+    text-align: right;
+    border-right: 4px solid $tip-yellow;
+  }
+
+  .tip-right {
+    text-align: left;
+    border-left: 4px solid $tip-yellow;
+    align-self: start;
+    flex: 0 1 calc(33.33% - 10px);
+  }
+
+  ol {
+    list-style-type: none;
+    counter-reset: custom-counter;
+    padding-left: 0;
+  }
+
+  li {
+    counter-increment: custom-counter;
+    margin-bottom: 10px;
+  }
+
+  li::before {
+    content: counter(custom-counter);
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border: 2px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+
+  @media (max-width: 800px) {
+    margin: 50px 20px;
+
+    > * {
+      flex: 0 1 calc(100% - 20px);
+    }
+
+    :is(blockquote) {
+      font-size: 30px;
+    }
+
+    :where(h1, h2) {
+      font-size: 40px;
+    }
+
+    .tip-left,
+    .tip-right {
+      text-align: center;
+      margin: 20px 0;
+      flex: 0 1 calc(100% - 20px);
+    }
+  }
+}
+
+/*Feature Queries code with @supports*/
+
+@supports (display: grid) {
 .post {
   color: #444;
   font-size: 20px;
@@ -126,6 +252,32 @@
     align-self: start;
   }
 
+  ol {
+    list-style-type: none;
+    counter-reset: custom-counter;
+    padding-left: 0;
+  }
+
+  li {
+    counter-increment: custom-counter;
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+
+  li::before {
+    content: counter(custom-counter);
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border: 2px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+
   @media (max-width: 800px) {
     margin: 50px 20px;
 
@@ -148,6 +300,7 @@
       margin: 20px 0;
     }
   }
+}
 }
 
  
