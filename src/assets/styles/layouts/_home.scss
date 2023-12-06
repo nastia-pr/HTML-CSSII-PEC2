@@ -138,7 +138,7 @@
     width: 100%;
   }
 
-  @media (max-width: 800px) {
+  @include tablet  {
     .nav {
       height: auto;
       text-align: center;
@@ -288,7 +288,7 @@
     width: 100%;
   }
 
-  @media (max-width:800px) {
+  @include tablet {
     .nav {
       grid-template-rows: auto;
       grid-auto-flow: row;
@@ -337,7 +337,7 @@
   width: $custom-carousel-width;
   margin: 50px auto;
 
-  @media (max-width: 800px) {
+  @include tablet  {
     width: $custom-carousel-width-mobile;
   }
 
@@ -351,7 +351,7 @@
     padding: 10px;
     border-radius: 10px;
 
-    @media (max-width: 800px) {
+    @include tablet  {
       font-size: $texto-carousel-font-size;
       padding: $texto-carousel-padding;
     }
@@ -385,7 +385,7 @@
     overflow: hidden;
     padding-top: 20px;
 
-    @media (max-width: 800px) {
+    @include tablet  {
       text-align: center;
     }
 
@@ -413,7 +413,7 @@
   margin-top: 50px;
   margin-bottom: 50px;
 
-  @media (max-width: 800px) {
+  @include tablet  {
     flex-direction: column;
   }
 
@@ -434,7 +434,7 @@
     justify-content: space-between;
     text-align: center;
 
-    @media (max-width: 800px) {
+    @include tablet  {
       flex-direction: column;
       margin-top: 10px;
       margin-bottom: 20px;
@@ -442,7 +442,7 @@
   }
 
   .grid_item_menu {
-    @media (max-width: 800px) {
+    @include tablet  {
       padding: 10px;
     }
   }
@@ -457,7 +457,7 @@
       margin-top: 50px;
       margin-bottom: 50px;
 
-      @media (max-width: 800px) {
+      @include tablet  {
         grid-template-columns: 1fr;
       }
 
@@ -479,7 +479,7 @@
         text-align: center;
         gap: 2em;
 
-        @media (max-width: 800px) {
+        @include tablet  {
           grid-template-columns: 1fr;
           margin-top: 10px;
           margin-bottom: 20px;
@@ -488,7 +488,7 @@
       }
 
       .grid_item_menu {
-        @media (max-width: 800px) {
+        @include tablet  {
           padding: 10px;
         }
       }
@@ -510,7 +510,7 @@
       color: $white-color;
       font-weight: 500;
 
-      @media (max-width: 800px) {
+      @include tablet  {
         text-align: center;
       }
     }
@@ -520,7 +520,7 @@
       color: $white-color;
       font-size: 18px;
 
-      @media (max-width: 800px) {
+      @include tablet  {
         text-align: center;
       }
     }
@@ -528,7 +528,7 @@
     .social_buttons {
       text-align: right;
 
-      @media (max-width: 800px) {
+      @include tablet  {
         text-align: center;
       }
 

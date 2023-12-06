@@ -40,7 +40,7 @@
     
   }
 
-  @media (max-width: 800px) {
+  @include tablet  {
     flex-direction: column;
     height: fit-content;
 
@@ -157,7 +157,7 @@
   }
 
 
-  @media (max-width: 800px) {
+  @include tablet  {
     margin: 50px 20px;
 
     > * {
@@ -278,7 +278,7 @@
   }
 
 
-  @media (max-width: 800px) {
+  @include tablet  {
     margin: 50px 20px;
 
     > * {

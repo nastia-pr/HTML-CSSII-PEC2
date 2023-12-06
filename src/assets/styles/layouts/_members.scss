@@ -63,7 +63,7 @@
 }
   
   
-@media (max-width:800px) {
+@include tablet  {
       .header {
           flex-direction: column;
           align-items: center;
